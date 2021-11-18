@@ -1,13 +1,17 @@
-package Soccer4;
+package Soccer5;
+
+import Soccer4.Coach;
+import Soccer4.Goalkeeper;
+import Soccer4.Player;
 
 import java.util.ArrayList;
 
 public class Team {
 
     private String name;
-    private Goalkeeper goalkeeper;
-    private Coach coach;
-    private ArrayList<Player> squad;
+    private Soccer4.Goalkeeper goalkeeper;
+    private Soccer4.Coach coach;
+    private ArrayList<Soccer4.Player> squad;
 
     public Team(String name, Goalkeeper goalkeeper, Coach coach) {
         this.name = name;
@@ -16,7 +20,7 @@ public class Team {
         this.squad = new ArrayList<>();
     }
 
-    public void addPlayer(Player player) {
+    public void addPlayer(Soccer4.Player player) {
         this.squad.add(player);
     }
 
@@ -27,7 +31,7 @@ public class Team {
 
         int sum = 0;
         sum += goalkeeper.getMotivation();
-        for (Player player : this.squad) {
+        for (Soccer4.Player player : this.squad) {
             sum += player.getMotivation();
         }
         return sum / (this.squad.size() + 1);
@@ -38,7 +42,7 @@ public class Team {
         sum += goalkeeper.getForce();
         int count = 0;
         for (int i = 0; i < this.squad.size() && i < 10; i++) {
-            Player player = this.squad.get(i);
+            Soccer4.Player player = this.squad.get(i);
             sum += player.getMotivation();
             count++;
         }
@@ -53,14 +57,10 @@ public class Team {
         result += "Trainer:" + this.coach.getName() + "\n";
         result += "Torwart:" + this.goalkeeper.getName() + "\n";
 
-        result += for(Player player: )
-
-    }
-}       /*+ "\nname: " + name
-                + "\ngoalkeeper: " + goalkeeper.getName()
-                + "\ncoach: " + coach.getName()
-                + "\nsquad: " + for(int i = 0; i < squad.size(); i++){
-                                Player player
+        for(Player player: this.squad){
+            result += "Spieler:" + player.getName() + "\n";
+        }
+        return result;
         }
     }
 }
