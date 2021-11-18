@@ -2,7 +2,7 @@ package Soccer3;
 
 import java.util.Random;
 
-public class Player extends {
+public class Player extends Person{
 
     protected int strength;
     protected int powerAtGoalKick;
