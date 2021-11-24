@@ -1,5 +1,7 @@
 package Soccer5;
 
+import java.util.Random;
+
 public class Gameplay {
     private static final int PLAYING_TIME = 90;
     private static final int MAX_ADDITIONAL_TIME = 5;
@@ -36,4 +38,5 @@ public class Gameplay {
             }
         }
     }
+
 }

@@ -45,22 +45,15 @@ public class Team {
         return sum / (count + 1);
     }
 
-
-
     @Override
     public String toString() {
         String result = "***Mannschaft***\n";
         result += "Trainer:" + this.coach.getName() + "\n";
         result += "Torwart:" + this.goalkeeper.getName() + "\n";
 
-        result += for(Player player: )
-
-    }
-}       /*+ "\nname: " + name
-                + "\ngoalkeeper: " + goalkeeper.getName()
-                + "\ncoach: " + coach.getName()
-                + "\nsquad: " + for(int i = 0; i < squad.size(); i++){
-                                Player player
+        for(Player player: this.squad){
+            result += "Spieler:" + player.getName() + "\n";
         }
+        return result;
     }
 }
